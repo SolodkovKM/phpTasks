@@ -1,0 +1,17 @@
+1. SELECT pv.value, p.name
+	FROM property_value pv
+		JOIN property p ON pv.property_id = p.id 
+	WHERE pv.product_id = @product_id
+	
+	
+	
+2.  SELECT name
+	FROM
+	(SELECT Count(*) cnt, PROP.name Name
+		FROM category C
+			JOIN product P ON P.category_id = C.id
+			JOIN property_value PV ON PV.product_id = P.id
+			JOIN property PROP ON PROP.id = PV.property_id
+			WHERE C.name = @category_name
+		GROUP BY PV.property_id, Name) CNAME
+	WHERE cnt = 1

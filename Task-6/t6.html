@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="../js/jquery-3.6.1.js"></script>
+    </head>
+    <body>
+        <div data-no-print="noprint">
+            SomeText
+        </div>
+        <div data-no-print="print">
+            Must be
+        </div>
+        <div data-no-print="noprint">
+            Must not be
+        </div>
+        <div data-no-print="print">
+            Must be
+        </div>
+        <div data-no-print="noprint">
+            Must not be
+        </div>
+    </body>
+    <script>
+        $('*').each(function () {if($(this).data('no-print') == 'noprint'){$(this).css('visibility','hidden')}});
+    </script>
+</html>

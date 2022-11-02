@@ -1,0 +1,17 @@
+ul.menu {
+    text-align: center;
+    list-style: none;
+}
+
+ul.menu li {
+    display: inline-block;
+    margin-right: 4px;
+    width: 31%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.main_menu {
+    width: 100%;
+    display: inline;
+}
